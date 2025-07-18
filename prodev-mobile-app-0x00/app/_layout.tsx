@@ -12,7 +12,6 @@ export default function RootLayout() {
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
 
-  
   if (!loaded) {
     // Async font loading only occurs in development.
     return null;
