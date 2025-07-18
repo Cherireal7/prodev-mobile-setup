@@ -1,50 +1,104 @@
-# Welcome to your Expo app 👋
+# prodev-mobile-app-0x00
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is part of the **ALX Mobile Development Setup** series. It demonstrates how to scaffold a React Native mobile application using the **Expo Router template**, test it with **Expo Go**, and document the initial setup process.
 
-## Get started
+---
 
-1. Install dependencies
+## **Project Objective**
+- Set up your first mobile application using the **Expo Router template**.
+- Modify the default home screen.
+- Understand the project structure and reset process.
 
+---
+
+## **Steps Followed for Scaffolding**
+
+1. **Navigate to the Parent Project Directory**  
    ```bash
-   npm install
-   ```
+   cd prodev-mobile-setup
 
-2. Start the app
 
-   ```bash
-   npx expo start
-   ```
+Create the Project Folder
 
-In the output, you'll find options to open the app in a
+bash
+Copy
+Edit
+mkdir prodev-mobile-app-0x00
+cd prodev-mobile-app-0x00
+Initialize the Expo Router App
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+bash
+Copy
+Edit
+npx create-expo-app@latest .
+Selected the default (TypeScript) Expo Router template.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Modify the Home Screen
 
-## Get a fresh project
+Opened app/(tabs)/index.tsx.
 
-When you're ready, run:
+Replaced:
 
-```bash
+tsx
+Copy
+Edit
+<ThemedText type="title">Welcome!</ThemedText>
+with:
+
+tsx
+Copy
+Edit
+<ThemedText type="title">** First App Created**</ThemedText>
+Start the Development Server
+
+bash
+Copy
+Edit
+npx expo start
+For Android: Scanned the QR code using Expo Go.
+
+For iOS: Used the camera app to scan the QR code.
+
+Reset the Project
+Ran:
+
+bash
+Copy
+Edit
 npm run reset-project
-```
+Observations from reset-project Command
+The reset-project command cleared caches and reset the Metro bundler environment.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+The existing app folder was renamed to app-example.
 
-## Learn more
+A fresh app directory with default starter files was created.
 
-To learn more about developing your project with Expo, look at the following resources:
+Running the app after this command is like starting with a clean project.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Project Structure
+app/(tabs)/index.tsx – Main entry screen (tab view).
 
-## Join the community
+components/ – Custom UI components like HelloWave and ThemedText.
 
-Join our community of developers creating universal apps.
+assets/ – Images and other static assets.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+tsconfig.json – TypeScript configuration for JSX and module paths.
+
+Key Tools
+Expo Go – To preview and test the app on your phone.
+
+React Native – Cross-platform mobile development.
+
+TypeScript – Strongly typed JavaScript.
+
+Next Steps
+Explore the default components (HelloWave, ParallaxScrollView) to understand how they work.
+
+Push the project to GitHub:
+
+bash
+Copy
+Edit
+git add .
+git commit -m "Initial Expo Router setup with ALX modifications"
+git push origin main
